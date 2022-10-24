@@ -12,7 +12,7 @@ class CodeBuilder:
     def __str__(self):
         str = ["class %s:"%self.root_name]
         if self.elements:
-            str.append("def __init__(self):")
+            str.append("  def __init__(self):")
             str.extend("    self.%s = %s"%(el[0],el[1]) for el in self.elements)
         else:
             str.append("  pass")
